@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Print Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .print-box {
+        width: 280px; /* 58mm printer width */
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
 
+<h2>XPrinter 235B – Print Test</h2>
+
+<div class="print-box" id="printArea">
+    <h3>Test Print</h3>
+    <p>Printer: XPrinter 235B</p>
+    <p>Date: <span id="date"></span></p>
+    <p>Status: OK ✓</p>
+</div>
+
+<button onclick="window.print()">Print Now</button>
+
+<script>
+document.getElementById('date').innerText = new Date().toLocaleString();
+</script>
+
+</body>
+</html>
